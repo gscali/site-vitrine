@@ -10,6 +10,10 @@ module.exports = {
 			fontFamily: {
 				mulish: ['Mulish', 'sans-serif'],
 			},
+			colors: {
+				'blue-ocean':'#5184F2',
+				'blue-linear':'#AFD4E2',
+			}
 		},
 	},
 	plugins: [...skeleton()],
