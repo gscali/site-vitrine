@@ -1,69 +1,43 @@
 <script lang="ts">
-    import Icon from '@iconify/svelte';
-
-    let type_biens = [
-        "Maison",
-        "Appartement",
-        "Terrain",
-        "Local commercial",
-        "Immeuble",
-        "Autre"
-    ]
-
-    let projects = [
-        "Achat",
-        "Vente",
-        "Location",
-        "Autre"
-    ]
-
 let firstname = "";
 let lastname = "";
 let email = "";
 let phone = "";
-let type_bien = "Maison";
-let project = "Achat";
-let numero = "0642424242";
+let comment = "";
 </script>
 
 
-<div class="flex flex-col gap-8 p-8 items-center">
-    <span class="text-5xl text-secondary-500 font-mulish font-bold self-start ml-8">Nous contacter</span>
-    <span class="text-md text-secondary-500 self-start">Nisi amet in esse proident ad dolor eiusmod excepteur irure aute et in ut sunt.</span>
-    <div class="flex-row flex gap-6 w-full">
-        <input type="text" placeholder="Nom" class="placeholder:text-slate-500 p-2 w-1/2 h-10 border-[1px] border-secondary-500" bind:value={lastname} required>
-        <input type="text" placeholder="Prénom" class="placeholder:text-slate-500 p-2 w-1/2 h-10 border-[1px] border-secondary-500" bind:value={firstname} required>
+<div class="flex flex-col h-[500px] w-1/2 mx-20">
+    <h2 class="text-white text-3xl">Contact us</h2>
+    <div class="flex flex-col items-center h-full w-full">
+        <div class="flex flex-col items-center flex-row justify-around h-full w-full">
+            <div class="flex w-full">
+                <div class="flex flex-col w-full mr-10">
+                    <span class="text-base">Name</span>
+                    <input type="text" class="w-full max-h-[50px] h-[40px] min-h-[30px] rounded" bind:value={lastname} required>
+                </div>
+                <div class="flex flex-col w-full">
+                    <span>First Name</span>
+                    <input type="text" class="w-full max-h-[50px] h-[40px] min-h-[30px] rounded" bind:value={firstname} required>
+                </div>
+            </div>
+            <div class="flex w-full">
+                <div class="flex flex-col w-full mr-10">
+                    <span>Phone</span>
+                    <input type="text" class="w-full max-h-[50px] h-[40px] min-h-[30px] rounded" bind:value={phone} required>
+                </div>
+                <div class="flex flex-col w-full">
+                    <span>Mail</span>
+                    <input type="text" class="w-full max-h-[50px] h-[40px] min-h-[30px] rounded" bind:value={email} required>
+                </div>
+            </div> 
+            <div class="flex w-full">
+                <div class="flex flex-col w-full">
+                    <span>Comment</span>
+                    <input type="text" class="w-full max-h-[150px] h-[140px] min-h-[130px] rounded" bind:value={comment} required>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="flex-row flex gap-6 w-full">
-        <input type="email" placeholder="email" class="placeholder:text-slate-500 p-2 w-1/2 h-10 border-[1px] border-secondary-500" bind:value={email} required>
-        <input type="tel" placeholder="numéro" class="placeholder:text-slate-500 p-2 w-1/2 h-10 border-[1px] border-secondary-500" bind:value={phone} required>
-    </div>
-    <div class="flex-row flex gap-6 w-full">
-    <select class="placeholder:text-slate-500 p-2 w-1/2 h-10 border-[1px] border-secondary-500" bind:value={type_bien} required>
-        {#each type_biens as type}
-            <option >{type}</option>
-        {/each}
-        
-    </select>
-    <select class="placeholder:text-slate-500 p-2 w-1/2 h-10 border-[1px] border-secondary-500" bind:value={project} required>
-        {#each projects as project}
-            <option >{project}</option>
-        {/each}
-    
-    </select>
-
-    </div>
-    <button class="btn variant-filled-secondary flex flex-row gap-2">
-        <Icon class="w-6 h-8" icon="entypo:email" />
-        Envoyer
-    </button>
-    <div class="flex flex-row gap-8 w-full items-center px-20">
-        <div class="h-[2px] bg-secondary-500/50 rounded-md w-full" />
-        <h2 class="text-2xl font-bold text-secondary-500">OU</h2>
-        <div class="h-[2px] bg-secondary-500/50 rounded-md w-full" />
-    </div>
-    <button class="btn variant-filled-secondary flex flex-row gap-2">
-        <Icon class="w-6 h-8" icon="entypo:phone" />
-        <a href={"tel:" + numero} > {numero}</a>
-    </button>
+    <button class="btn variant-filled-secondary w-full bg-blue-ocean rounded">send it</button>
 </div>
