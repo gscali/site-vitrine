@@ -7,7 +7,7 @@
 <div class="w-full bg-white relative" >
     <div class="container mx-auto flex flex-row px-20 gap-20">
         <div class="w-1/2 flex flex-row justify-center items-center ">
-            <img class="absolute bottom-0 right-0 z-30" src="HouseWhite.png" alt="hero">
+            <!-- <img class="absolute bottom-0 right-0 z-30" src="HouseWhite.png" alt="hero"> -->
             <div class="bg-white/50 rounded-3xl relative z-40">
                 <!-- <ContactForm/> -->
             </div>

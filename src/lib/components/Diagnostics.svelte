@@ -66,41 +66,40 @@
             
 </script>
 
-<div class="container mx-auto flex flex-col items-center pt-8 pb-16">
-  <div class="flex flex-col bg-surface-500 w-[80%] gap-8">
-    <div class="grid grid-cols-3 gap-8 place-items-center">
-      <div class="h-1 bg-secondary-500/50 rounded-md w-full" />
-      <h2 class="text-4xl font-bold text-secondary-500">NOS DIAGNOSTICS</h2>
-      <div class="h-1 bg-secondary-500/50 rounded-md w-full" />
+<div class="container mx-auto flex flex-col items-center pt-8 pb-16 bg-gradient-to-tr from-[#5184F2] to-white">
+  <div class="flex flex-col w-[80%] gap-8">
+    <div class="flex flex-row gap-8 justify-between">
+      <!-- <div class="h-1 bg-secondary-500/50 rounded-md w-full" /> -->
+      <h2 class="text-4xl font-bold text-secondary-500">OUR DIAGNOSTICS</h2>
+      <div class=" gap-4">
+        <button type="button" class="btn-icon" on:click={multiColumnLeft}>
+          <Icon icon="mingcute:arrow-left-fill" class="w-8 h-8 text-secondary-500" />
+        </button>
+        <button type="button" class="btn-icon" on:click={multiColumnRight}>
+          <Icon icon="mingcute:arrow-right-fill" class="w-8 h-8 text-secondary-500" />
+        </button>
+      </div>
     </div>
 
     <div class="grid grid-cols-[auto_1fr_auto] gap-4 items-center">
-      <!-- Button: Left -->
-      <button type="button" class="btn-icon" on:click={multiColumnLeft}>
-        <Icon icon="mingcute:arrow-left-fill" class="w-8 h-8 text-secondary-500" />
-      </button>
       <!-- Carousel -->
-      <div bind:this={elem} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 overflow-x-auto">
+      <div bind:this={elem} class="snap-x snap-mandatory scroll-smooth flex gap-2 pb-2 overflow-hidden">
         {#each data as diagnostic}
-          <div class="shrink-0 w-[24%] snap-start">
-            <img
-              class="rounded-container-token hover:brightness-125"
-              src={diagnostic.image}
-              alt={diagnostic.name}
-              title={diagnostic.name}
-              loading="lazy"
-            />
-            <div class="flex flex-col justify-center card p-2 variant-filled-surface m-3 drop-shadow-md gap-2">
-              <h3 class="text-md font-bold text-secondary-500">{diagnostic.name}</h3>
+          <div class="shrink-0 w-[286px] h-[401px] snap-start ">
+            <div class="flex flex-col p-2 variant-filled-surface m-3 drop-shadow-md gap-8 h-full">
+              <img
+                class="rounded hover:brightness-125"
+                src={diagnostic.image}
+                alt={diagnostic.name}
+                title={diagnostic.name}
+                loading="lazy"
+              />
+              <h3 class="text-md font-bold text-blue-500">{diagnostic.name}</h3>
               <p class="text-xs text-gray-700">{diagnostic.description}</p>
             </div>
           </div>
         {/each}
       </div>
-      <!-- Button-Right -->
-      <button type="button" class="btn-icon" on:click={multiColumnRight}>
-        <Icon icon="mingcute:arrow-right-fill" class="w-8 h-8 text-secondary-500" />
-      </button>
     </div>
   </div>
 </div> 
