@@ -4,11 +4,15 @@
 	import Heros from "$lib/components/Heros.svelte";
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
+    import Cards from "$lib/components/Cards.svelte";
+    import ContactUs from "$lib/components/ContactUs.svelte";
 </script>
 
 <Navbar />
 <Heros/>
 <AboutMe />
 <Diagnostics/>
+<Cards/>
+<ContactUs/>
 <Footer />
-<!-- <ContactUs/> -->
+

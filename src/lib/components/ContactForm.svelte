@@ -1,29 +1,9 @@
 <script lang="ts">
-    import Icon from '@iconify/svelte';
-
-    let type_biens = [
-        "Maison",
-        "Appartement",
-        "Terrain",
-        "Local commercial",
-        "Immeuble",
-        "Autre"
-    ]
-
-    let projects = [
-        "Achat",
-        "Vente",
-        "Location",
-        "Autre"
-    ]
-
 let firstname = "";
 let lastname = "";
 let email = "";
 let phone = "";
-let type_bien = "Maison";
-let project = "Achat";
-let numero = "0642424242";
+let comment = "";
 </script>
 
 
