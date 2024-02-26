@@ -5,7 +5,7 @@
 	import Navbar from "$lib/components/Navbar.svelte";
 	import Footer from "$lib/components/Footer.svelte";
     import Cards from "$lib/components/Cards.svelte";
-    import ContactUs from "$lib/components/ContactUs.svelte";
+    import ContactEnd from "$lib/components/ContactEnd.svelte";
 </script>
 
 <Navbar />
@@ -13,6 +13,6 @@
 <AboutMe />
 <Diagnostics/>
 <Cards/>
-<ContactUs/>
+<ContactEnd/>
 <Footer />
 

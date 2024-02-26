@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ContactForm from "./ContactForm.svelte";
+	import ContactInfo from "./ContactInfo.svelte";
 
 
 </script>
@@ -11,7 +11,7 @@
         </div>
         <div class="p-8 w-1/2">
             <div class="bg-white/50 rounded-3xl relative z-40">
-                <ContactForm/>
+                <ContactInfo/>
             </div>
         </div>
     </div>

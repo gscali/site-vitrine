@@ -1,9 +1,3 @@
-<script lang="ts">
-	import ContactForm from "./ContactForm.svelte";
-
-
-</script>
-
 <div class="w-full bg-white relative" >
     <div class="container mx-auto flex flex-row px-20 gap-20">
         <div class="w-1/2 flex flex-row justify-center items-center ">
